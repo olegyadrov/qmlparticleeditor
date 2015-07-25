@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/components/PEAge.qml</file>
+        <file>qml/components/PEAngleDirection.qml</file>
+        <file>qml/components/PEAttractor.qml</file>
+        <file>qml/components/PECumulativeDirection.qml</file>
+        <file>qml/components/PEEllipseShape.qml</file>
+        <file>qml/components/PEEmitter.qml</file>
+        <file>qml/components/PEFriction.qml</file>
+        <file>qml/components/PEGravity.qml</file>
+        <file>qml/components/PEImageParticle.qml</file>
+        <file>qml/components/PELineShape.qml</file>
+        <file>qml/components/PEMaskShape.qml</file>
+        <file>qml/components/PEParticleSystem.qml</file>
+        <file>qml/components/PEPointDirection.qml</file>
+        <file>qml/components/PERectangleShape.qml</file>
+        <file>qml/components/PETargetDirection.qml</file>
+        <file>qml/components/PETurbulence.qml</file>
+        <file>qml/components/PEWander.qml</file>
+        <file>qml/controls/ColorSelector.qml</file>
+        <file>qml/controls/ImageSelector.qml</file>
+        <file>qml/controls/PropertyNameLabel.qml</file>
+        <file>qml/controls/Scene.qml</file>
+        <file>qml/controls/SceneArea.qml</file>
+        <file>qml/controls/SceneItem.qml</file>
+        <file>qml/controls/SettingsPanel.qml</file>
+        <file>qml/scripts/ObjectManager.js</file>
+        <file>qml/windows/AboutWindow.qml</file>
+        <file>qml/windows/ExportWindow.qml</file>
+        <file>qml/windows/ParticlesWindow.qml</file>
+        <file>qml/main.qml</file>
+        <file>resources/fonts/liberationmono.ttf</file>
+        <file>resources/images/particle.png</file>
+    </qresource>
+</RCC>
