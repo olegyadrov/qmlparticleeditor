@@ -142,6 +142,8 @@ ApplicationWindow {
         property color gravityColor:    "#ff0000"
         property color turbulenceColor: "#ff0000"
         property color wanderColor:     "#ff0000"
+
+        property bool framesVisible: true
     }
 
     Settings {

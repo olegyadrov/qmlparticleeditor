@@ -31,7 +31,7 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        visible: true
+        visible: settings.framesVisible
         color: "#00000000"
         border.width: (scene.selectedItem === sceneItem) ? 3 : 1
         border.color: frameColor
