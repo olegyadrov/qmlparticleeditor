@@ -21,6 +21,7 @@ import QtQuick.Controls 1.3
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Particles 2.0
+import Qt.labs.settings 1.0
 import "scripts/ObjectManager.js" as ObjectManager
 import "controls"
 import "windows"
@@ -36,6 +37,11 @@ ApplicationWindow {
     menuBar: MenuBar {
         Menu {
             title: "File"
+
+            MenuItem {
+                text: "Options..."
+                onTriggered: optionsWindow.show()
+            }
 
             MenuItem {
                 text: "Export QML code"
@@ -125,6 +131,31 @@ ApplicationWindow {
 
     FontLoader {
         source: "../resources/fonts/liberationmono.ttf"
+    }
+
+    QtObject {
+        id: settings
+        property color emitterColor:    "#0000ff"
+        property color ageColor:        "#ff0000"
+        property color attractorColor:  "#ff0000"
+        property color frictionColor:   "#ff0000"
+        property color gravityColor:    "#ff0000"
+        property color turbulenceColor: "#ff0000"
+        property color wanderColor:     "#ff0000"
+    }
+
+    Settings {
+        property alias emitterColor: settings.emitterColor
+        property alias ageColor: settings.ageColor
+        property alias attractorColor: settings.attractorColor
+        property alias frictionColor: settings.frictionColor
+        property alias gravityColor: settings.gravityColor
+        property alias turbulenceColor: settings.turbulenceColor
+        property alias wanderColor: settings.wanderColor
+    }
+
+    OptionsWindow {
+        id: optionsWindow
     }
 
     ExportWindow {
