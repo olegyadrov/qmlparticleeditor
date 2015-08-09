@@ -59,13 +59,6 @@ Item {
             "objectName" : "particleSystem"
         }
         ObjectManager.system = particleSystemComponent.createObject(scene, defaultSystemParams)
-
-        var imageParticleParams = {
-            "objectName" : "Default particle",
-            "source" : "../../resources/images/particle.png",
-            "color" : "#80c342"
-        }
-       createObject("ImageParticle", imageParticleParams)
     }
 
     MouseArea {
