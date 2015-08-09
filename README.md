@@ -24,6 +24,11 @@ Below you can see the list of the features provided by QtQuick 2.4 and/or QtQuic
 * Group Goal component
 * Sprite Goal component
 
+## KNOWN ISSUES
+
+1. QtQuick.Particles 2.0 module contains many bugs, and some of them lead to the app crash (for example, it will happen if you delete a particle of a group that is currently on the scene by going into Manage Particles). So it's strongly recommended to read the "How to use" section first and use this tool in the way described there.
+2. Because of bugs in Flickable and FileDialog in Qt 5.5.0, QML Particle Editor may work sluggish with this version. Use it with 5.4.2 or even 5.4.1 for better experience.
+
 ## LICENSE
 
 Copyright (C) 2013-2015 [Oleg Yadrov](https://linkedin.com/in/olegyadrov)
