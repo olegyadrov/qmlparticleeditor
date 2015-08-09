@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peTurbulence
 
-    frameColor: "#ff0000"
+    frameColor: settings.turbulenceColor
 
     property string type: "Turbulence"
     property bool isAffector: true

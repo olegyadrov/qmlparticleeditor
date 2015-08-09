@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peAttractor
 
-    frameColor: "#ff0000"
+    frameColor: settings.attractorColor
 
     property string type: "Attractor"
     property bool isAffector: true

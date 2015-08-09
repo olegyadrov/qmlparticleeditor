@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peWander
 
-    frameColor: "#ff0000"
+    frameColor: settings.wanderColor
 
     property string type: "Wander"
     property bool isAffector: true

@@ -143,6 +143,18 @@ Item {
                         backgroundRect.color = color
                 }
 
+                PropertyNameLabel {
+                    text: "Items frames visible"
+                }
+
+                CheckBox {
+                    Layout.fillWidth: true
+
+                    checked: settings.framesVisible
+                    onCheckedChanged:
+                        settings.framesVisible = checked
+                }
+
                 Item {
                     Layout.fillHeight: true
                 }

@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peAge
 
-    frameColor: "#ff0000"
+    frameColor: settings.ageColor
 
     property string type: "Age"
     property bool isAffector: true

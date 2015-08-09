@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peFriction
 
-    frameColor: "#ff0000"
+    frameColor: settings.frictionColor
 
     property string type: "Friction"
     property bool isAffector: true

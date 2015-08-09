@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peEmitter
 
-    frameColor: "#0000ff"
+    frameColor: settings.emitterColor
 
     property string type: "Emitter"
     property bool isEmitter: true

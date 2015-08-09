@@ -26,7 +26,7 @@ import "../controls"
 SceneItem {
     id: peGravity
 
-    frameColor: "#ff0000"
+    frameColor: settings.gravityColor
 
     property string type: "Gravity"
     property bool isAffector: true
