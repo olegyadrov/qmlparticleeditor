@@ -69,7 +69,7 @@ Window {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: parent.top
-            anchors.bottom: newParticleButton.top
+            anchors.bottom: newParticleGroupBox.top
             anchors.bottomMargin: 8
 
             ListView {
@@ -138,18 +138,55 @@ Window {
             }
         }
 
-        Button {
-            id: newParticleButton
-
+        GroupBox {
+            id: newParticleGroupBox
             anchors.left: parent.left
+            anchors.right: parent.right
             anchors.bottom: parent.bottom
             anchors.margins: 8
+            title: "New particle"
 
-            text: "Create new"
+            GridLayout {
+                anchors.fill: parent
+                columns: 2
 
-            onClicked: {
-                sceneArea.scene.createObject("ImageParticle")
-                refresh()
+                Label {
+                    elide: Text.ElideRight
+                    text: "Object name"
+                }
+                TextField {
+                    id: newParticleObjectName
+                    Layout.fillWidth: true
+                    maximumLength: 50
+                }
+
+                Label {
+                    elide: Text.ElideRight
+                    text: "Groups"
+                }
+                TextField {
+                    id: newParticleGroups
+                    Layout.fillWidth: true
+                }
+
+                Item { Layout.minimumWidth: 1 }
+                Button {
+                    Layout.alignment: Qt.AlignRight
+                    text: "Create"
+
+                    onClicked: {
+                        var imageParticleParams = {
+                            "objectName" : newParticleObjectName.text,
+                            "groups" : newParticleGroups.text === "" ? [] : newParticleGroups.text.split(",")
+                        }
+
+                        sceneArea.scene.createObject("ImageParticle", imageParticleParams)
+                        refresh()
+
+                        newParticleObjectName.text = ""
+                        newParticleGroups.text = ""
+                    }
+                }
             }
         }
     }
