@@ -27,6 +27,7 @@
         <file>qml/scripts/ObjectManager.js</file>
         <file>qml/windows/AboutWindow.qml</file>
         <file>qml/windows/ExportWindow.qml</file>
+        <file>qml/windows/OptionsWindow.qml</file>
         <file>qml/windows/ParticlesWindow.qml</file>
         <file>qml/main.qml</file>
         <file>resources/fonts/liberationmono.ttf</file>
