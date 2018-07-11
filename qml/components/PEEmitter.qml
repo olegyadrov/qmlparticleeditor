@@ -1092,6 +1092,46 @@ SceneItem {
                         emitter.shape.source = path
                 }
 
+                Button {
+                    text: "Burst"
+                    onClicked: {
+                        emitter.burst(emitterBurst.value)
+                    }
+                }
+                SpinBox {
+                    id: emitterBurst
+                    Layout.fillWidth: true
+
+                    minimumValue: 0
+                    maximumValue: consts.maxInt
+                    decimals: 0
+
+                    value: 2
+
+                    Component.onCompleted: {
+                        value = emitter.emitRate
+                    }
+
+                }
+
+                Button {
+                    text: "Pulse"
+                    onClicked: {
+                        emitter.pulse(emitterPulse.value)
+                    }
+                }
+                SpinBox {
+                    id: emitterPulse
+                    Layout.fillWidth: true
+
+                    minimumValue: 0
+                    maximumValue: consts.maxInt
+                    stepSize: 1000
+
+                    value: 1000
+
+                }
+
                 Item {
                     Layout.fillHeight: true
                 }
