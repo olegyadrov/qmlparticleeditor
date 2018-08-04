@@ -199,6 +199,20 @@ SceneItem {
                 }
 
                 PropertyNameLabel {
+                    text: "Strength"
+                }
+                SpinBox {
+                    Layout.fillWidth: true
+
+                    minimumValue: 0
+                    maximumValue: consts.maxInt
+                    decimals: 2
+
+                    value: attractor.strength
+                    onValueChanged: attractor.strength = value
+                }
+
+                PropertyNameLabel {
                     text: "Affected parameter"
                 }
                 ComboBox {
@@ -378,7 +392,7 @@ SceneItem {
 
     function toQML() {
         var genericProperties = ["objectName", "x", "y", "width", "height"]
-        var properties = ["enabled", "groups", "whenCollidingWith", "once", "affectedParameter", "proportionalToDistance", "system"]
+        var properties = ["enabled", "groups", "whenCollidingWith", "once", "strength", "affectedParameter", "proportionalToDistance", "system"]
         var objectProperties = ["shape"]
 
         var data = "    " + peAttractor.type + " {"
